@@ -1,0 +1,56 @@
+<script>
+    $(function () {
+        Highcharts.chart('chart-vcores', {
+        title: {
+        text: 'Vcores usage',
+        x: -20 //center
+        },
+        xAxis: {
+        title: {
+        text: 'Jenkins job number'
+        }
+        },
+        yAxis: {
+        title: {
+        text: 'VCORE-SECONDS'
+        }
+        },series: [
+            {
+                name: 'VCORE-SECONDS',
+                data: [
+                    $CHART_VCORES
+                ]
+            }
+        ]
+        });
+    });
+    $(function () {
+        Highcharts.chart('chart-mb', {
+        title: {
+        text: 'Memory usage',
+        x: -20 //center
+        },
+        xAxis: {
+        title: {
+        text: 'Jenkins job number'
+        }
+        },
+        yAxis: {
+        title: {
+        text: 'MB-SECONDS'
+        }
+        },series: [
+            {
+                name: 'MB-SECONDS',
+                data: [
+                    $CHART_MB
+                ]
+            }
+        ]
+        });
+    });
+</script>
+
+</div>
+</body>
+</html>
